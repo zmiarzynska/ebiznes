@@ -29,7 +29,8 @@ RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.lis
 
 #NPM
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs &&\
+	npm install npm@latest -g
 
 #REACT
 EXPOSE 8000
