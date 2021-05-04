@@ -1,0 +1,82 @@
+
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+#ItemController
+POST    /item                         controllers.ItemController.createItem
+GET     /items                         controllers.ItemController.readAllItems
+GET     /item/:id                     controllers.ItemController.readItem(id:Int)
+PUT     /item/:id                             controllers.ItemController.updateItem(id:Int)
+DELETE  /item/:id                     controllers.ItemController.deleteItem(id: Int)
+
+
+#UserController
+POST    /user                            controllers.UserController.createUser
+GET     /users                            controllers.UserController.readAllUsers
+GET     /user/:id                        controllers.UserController.readUser(id: Int)
+PUT     /user/:id                        controllers.UserController.updateUser(id: Int)
+DELETE  /user/:id                        controllers.UserController.deleteUser(id: Int)
+
+
+#CartController
+POST    /card                            controllers.CardController.createCard
+GET     /cards                            controllers.CardController.readAllCards
+GET     /card/:id                        controllers.CardController.readCard(id: Int)
+PUT     /card/:id                        controllers.CardController.updateCard(id:Int)
+DELETE  /card/:id                        controllers.CardController.deleteCard(id: Int)
+
+#CategoryController
+POST    /category                            controllers.CategoryController.createCategory
+GET     /categories                          controllers.CategoryController.readAllCategories
+GET     /category/:id                        controllers.CategoryController.readCategory(id: Int)
+PUT     /category/:id                        controllers.CategoryController.updateCategory(id:Int)
+DELETE  /category/:id                        controllers.CategoryController.deleteCategory(id: Int)
+
+
+#PaymentController
+POST    /payment                            controllers.PaymentController.createPayment
+GET     /payment/:id                        controllers.PaymentController.readPayment(id: Int)
+PUT     /payment/:id                        controllers.PaymentController.updatePayment(id:Int)
+DELETE  /payment/:id                        controllers.PaymentController.deletePayment(id: Int)
+
+#AccountController
+POST    /account                            controllers.AccountController.createAccount
+GET     /account/:id                        controllers.AccountController.readAccount(id: Int)
+PUT     /account/:id                        controllers.AccountController.updateAccount(id:Int)
+DELETE  /account/:id                        controllers.AccountController.deleteAccount(id: Int)
+
+#OrderController
+POST    /myOrders                            controllers.OrderController.createMyOrders()
+GET     /myOrders                            controllers.OrderController.getMyOrders
+GET     /myOrders/:id                        controllers.OrderController.readMyOrders(id: Int)
+
+
+#RateController
+POST    /rate                            controllers.RateController.createRate
+GET     /rates                           controllers.RateController.readAllRates
+GET     /rate/:id                        controllers.RateController.readRate(id: Int)
+PUT     /rate/:id                        controllers.RateController.updateRate(id:Int)
+DELETE  /rate/:id                        controllers.RateController.deleteRate(id: Int)
+
+#WishListController
+POST    /wishList                            controllers.WishListController.createWishList
+GET     /wishList/:id                        controllers.WishListController.readWishList(id: Int)
+PUT     /wishList/:id                        controllers.WishListController.updateWishList(id:Int)
+DELETE  /wishList/:id                        controllers.WishListController.deleteWishList(id: Int)
+
+#ShippingController
+POST    /shipping                            controllers.ShippingController.createShipping
+GET     /shipping/:id                        controllers.ShippingController.readShipping(id: Int)
+PUT     /shipping/:id                        controllers.ShippingController.updateShipping(id: Int)
+DELETE  /shipping/:id                        controllers.ShippingController.deleteShipping(id: Int)
